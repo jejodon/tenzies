@@ -3,9 +3,9 @@
 }
 
 body {
+  font-family: Karla, sans-serif;
   margin: 0;
-  font-family: Inter, sans-serif;
-  background: #0B2434;
+  background-color: #0B2434;
   padding: 20px;
   height: 100vh;
   display: flex;
@@ -17,8 +17,8 @@ body {
 div#root {
   height: 100%;
   width: 100%;
-  max-width: 400px;
   max-height: 400px;
+  max-width: 400px;
 }
 
 main {
@@ -27,16 +27,19 @@ main {
   border-radius: 5px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center; 
-  padding: 50px;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .dice-container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); 
-  grid-template-rows: repeat(2, auto); 
+  grid-template: auto auto / repeat(5, 1fr);
   gap: 20px;
+}
+
+button {
+  font-family: Karla, sans-serif;
+  cursor: pointer;
 }
 
 .dice-container button {
@@ -46,9 +49,16 @@ main {
   border-radius: 10px;
   border: none;
   background-color: white;
-  font-family: Inter, sans-serif;
   font-size: 1.75rem;
   font-weight: bold;
-  cursor: pointer;
 }
 
+button.roll-dice {
+  height: 50px;
+  width: 100px;
+  border: none;
+  border-radius: 6px;
+  background-color: #5035FF;
+  color: white;
+  font-size: 1.2rem;
+}
